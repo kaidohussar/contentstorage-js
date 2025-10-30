@@ -1,0 +1,61 @@
+{
+  "name": "@contentstorage/js",
+  "author": "Kaido Hussar <kaidohus@gmail.com>",
+  "homepage": "https://contentstorage.app",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Contentstorage JS SDK for runtime content management with support for variations, images etc",
+  "license": "MIT",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "main": "dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaidohussar/contentstorage-js.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix",
+    "prettier:check": "prettier --check \"src/**/*.ts\"",
+    "prettier:write": "prettier --write \"src/**/*.ts\"",
+    "release": "npx release-it"
+  },
+  "dependencies": {
+    "axios": "^1.7.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.12",
+    "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "sideEffects": [
+    "./dist/index.js"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist/**/*",
+    "LICENSE",
+    "README.md"
+  ],
+  "keywords": [
+    "contentstorage",
+    "sdk",
+    "i18n",
+    "internationalization",
+    "content-management",
+    "variations",
+    "ab-testing"
+  ]
+}
