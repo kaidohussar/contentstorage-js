@@ -2,7 +2,7 @@
   "name": "@contentstorage/js",
   "author": "Kaido Hussar <kaidohus@gmail.com>",
   "homepage": "https://contentstorage.app",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "description": "Contentstorage JS SDK for runtime content management with support for variations, images etc",
   "license": "MIT",
