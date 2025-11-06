@@ -8,6 +8,7 @@ declare global {
         ids: Set<string>;
         type: 'text' | 'image' | 'variation';
         variation?: string;
+        variables?: Record<string, any>;
       }
     >;
     currentLanguageCode: LanguageCode | null;

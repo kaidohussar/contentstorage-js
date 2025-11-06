@@ -138,6 +138,7 @@ export function getText<Path extends keyof ContentStructure>(
       window.memoryMap.set(key, {
         ids: idSet,
         type: 'text',
+        ...(variables && Object.keys(variables).length > 0 && { variables }),
       });
     }
 
@@ -284,6 +285,7 @@ export function getVariation<Path extends keyof ContentStructure>(
             ids: idSet,
             type: 'variation',
             variation: variationKey,
+            ...(variables && Object.keys(variables).length > 0 && { variables }),
           });
         }
 
@@ -325,6 +327,7 @@ export function getVariation<Path extends keyof ContentStructure>(
             ids: idSet,
             type: 'variation',
             variation: 'default',
+            ...(variables && Object.keys(variables).length > 0 && { variables }),
           });
         }
 
